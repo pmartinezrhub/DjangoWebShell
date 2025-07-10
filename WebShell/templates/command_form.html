@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web Terminal</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <h1>Web Terminal</h1>
+    <form method="post">
+        {% csrf_token %}
+        <textarea rows=5 name="command" placeholder="Enter a shell command..." style="width: 50%;min-height: 0cm;"></textarea><br><br>
+        <button type="submit">Run</button>
+    </form>
+
+    {% if output %}
+        <h2>Output:</h2>
+        <pre>{{ output }}</pre>
+    {% endif %}
+</body>
+</html>
