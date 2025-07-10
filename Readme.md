@@ -4,8 +4,11 @@ Any use outside of the instructions, recommendations, or stated purposes is the 
 
 The user agrees that they use the content/material/product/service at their own risk.
 
-Run
+How To run
+You need Python interpreter installed 
+
 <pre>
-source bin/activate
+source bin/activate # python -m venv . if you want to create by yourself.
+pip install -r requirements.txt
 python manage.py runserver
 </pre>
